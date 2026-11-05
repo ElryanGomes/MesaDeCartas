@@ -9,7 +9,12 @@ import type { FilaDeJogadores } from "./contratos/fila-de-jogadores";
 import type { GeradorAleatorio } from "./contratos/gerador-aleatorio";
 import type { EstrategiaDeOrdenacao } from "./contratos/estrategia-de-ordenacao";
 import type { FormatadorDeCarta } from "./contratos/formatador-de-carta";
+
+// importar aqui 
 import { PilhaEmArray } from './implementacoes/pilha-em-array';
+import { FormatadorCompacto } from "./implementacoes/formatador-compacto";
+
+
 // A semente da partida vem da página (?semente=123); o padrão é 42.
 // O verificador usa sempre a semente 42, pois conhece a sequência dela.
 const SEMENTE = lerSemente();
@@ -17,8 +22,12 @@ const SEMENTE_DE_TESTE = 42;
 
 // TODO: instancie aqui as suas classes (e importe-as no topo do arquivo).
 // Crie estas sete variáveis, cada uma com o tipo da sua interface:
-// gerador (com SEMENTE), geradorDeTeste (com SEMENTE_DE_TESTE; é só para
-// o verificador), compra, descarte, ordemDaVez, ordenacao e formatador.
+const compra: PilhaDeCartas = new PilhaEmArray();
+const descarte: PilhaDeCartas = new PilhaEmArray();
+const formatador: FormatadorDeCarta = new FormatadorCompacto();
+
+
+// gerador (com SEMENTE), geradorDeTeste (com SEMENTE_DE_TESTE; é só para o verificador), compra, descarte, ordemDaVez, ordenacao e formatador.
 
 // Etapa 1: confere se as suas implementações respeitam os contratos.
 // O resultado aparece no CONSOLE do navegador (F12).
