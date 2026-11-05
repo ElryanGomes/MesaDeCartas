@@ -15,6 +15,7 @@ import { PilhaEmArray } from './implementacoes/pilha-em-array';
 import { FormatadorCompacto } from "./implementacoes/formatador-compacto";
 import { OrdenacaoPorValor } from "./implementacoes/ordenacao-por-valor";
 import { FilaEmArray } from "./implementacoes/fila-em-array";
+import { GeradorCongruencial } from "./implementacoes/gerador-congruencial";
 
 
 // A semente da partida vem da página (?semente=123); o padrão é 42.
@@ -29,6 +30,8 @@ const descarte: PilhaDeCartas = new PilhaEmArray();
 const formatador: FormatadorDeCarta = new FormatadorCompacto();
 const ordenacao: EstrategiaDeOrdenacao = new OrdenacaoPorValor();
 const ordemDaVez: FilaDeJogadores = new FilaEmArray();
+const gerador: GeradorAleatorio = new GeradorCongruencial(SEMENTE);
+const geradorDeTeste: GeradorAleatorio = new GeradorCongruencial(SEMENTE_DE_TESTE);
 
 
 // gerador (com SEMENTE), geradorDeTeste (com SEMENTE_DE_TESTE; é só para o verificador), compra, descarte, ordemDaVez, ordenacao e formatador.

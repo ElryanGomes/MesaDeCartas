@@ -1,4 +1,4 @@
-import { Carta } from "../modelos/carta.js";
+import { Carta } from "../modelos/carta";
 import type { FormatadorDeCarta } from "../contratos/formatador-de-carta";
 
 export class FormatadorCompacto implements FormatadorDeCarta {

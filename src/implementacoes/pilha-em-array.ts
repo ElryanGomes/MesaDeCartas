@@ -1,5 +1,5 @@
-import { PilhaDeCartas } from '../contratos/pilha-de-cartas';
-import { Carta } from '../modelos/carta';
+import type { PilhaDeCartas } from '../contratos/pilha-de-cartas';
+import type { Carta } from '../modelos/carta';
 
 export class PilhaEmArray implements PilhaDeCartas {
     private cartas: Carta[] = [];
