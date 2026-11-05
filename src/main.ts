@@ -14,6 +14,7 @@ import type { FormatadorDeCarta } from "./contratos/formatador-de-carta";
 import { PilhaEmArray } from './implementacoes/pilha-em-array';
 import { FormatadorCompacto } from "./implementacoes/formatador-compacto";
 import { OrdenacaoPorValor } from "./implementacoes/ordenacao-por-valor";
+import { FilaEmArray } from "./implementacoes/fila-em-array";
 
 
 // A semente da partida vem da página (?semente=123); o padrão é 42.
@@ -27,6 +28,7 @@ const compra: PilhaDeCartas = new PilhaEmArray();
 const descarte: PilhaDeCartas = new PilhaEmArray();
 const formatador: FormatadorDeCarta = new FormatadorCompacto();
 const ordenacao: EstrategiaDeOrdenacao = new OrdenacaoPorValor();
+const ordemDaVez: FilaDeJogadores = new FilaEmArray();
 
 
 // gerador (com SEMENTE), geradorDeTeste (com SEMENTE_DE_TESTE; é só para o verificador), compra, descarte, ordemDaVez, ordenacao e formatador.
